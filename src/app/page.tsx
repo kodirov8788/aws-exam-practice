@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { DomainCard } from "@/components/dashboard/DomainCard";
 import { StatsOverview } from "@/components/dashboard/StatsOverview";
 import { Button } from "@/components/ui/button";
@@ -111,14 +112,24 @@ export default function Dashboard() {
       <div className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-bold tracking-tight">
-                AWS Cloud Practitioner
-              </h1>
-              <p className="text-muted-foreground mt-1">
-                Practice and master the AWS Cloud Practitioner certification
-                exam
-              </p>
+            <div className="flex items-center gap-4">
+              <Image
+                src="/logo.png"
+                alt="AWS Exam Practice Logo"
+                width={48}
+                height={48}
+                className="rounded-lg"
+                priority
+              />
+              <div>
+                <h1 className="text-3xl font-bold tracking-tight">
+                  AWS Cloud Practitioner
+                </h1>
+                <p className="text-muted-foreground mt-1">
+                  Practice and master the AWS Cloud Practitioner certification
+                  exam
+                </p>
+              </div>
             </div>
             <div className="flex items-center gap-2">
               <Button
